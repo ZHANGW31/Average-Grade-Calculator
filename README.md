@@ -1,4 +1,4 @@
-# ideal-chainsaw
+# Average-Grade-Calculator
 Console Application for Calculating Average Scores based on user input
 
 This is the first iteration of my Average Score Calculator Console Application
