@@ -9,10 +9,8 @@ namespace CalculatingAverages
             Console.WriteLine("\nThis console application will calculate your average grade given the scores you input!");
             Console.WriteLine("\nTo begin, enter your scores! Make sure the values you enter are between 0 and 100!");
             Console.WriteLine("\nWhen you are ready to calculate your average, enter 000 into the console to calculate your average!");
-            double sum = 0;
-            
+            double sum = 0;           
             char letterGrade = 'F';
-
             //Try, Catch and Finally for exception handling in the for iteration and if statements.
             try
             {
@@ -20,12 +18,9 @@ namespace CalculatingAverages
                 for (int i = 1; i <= countOfInputsMax; i++)
                 {
                     Console.Write($"\nPlease enter your next value: ");
-                    var strsum = Console.ReadLine();
-                    double userInput = double.Parse(strsum);
+                    double userInput = double.Parse(Console.ReadLine());
 
                     //This If statement checks to see if the user entered 000, if they did, it evaluates their inputted values and breaks out of the loop.
-                    
-
                     if (userInput == 000)
                     {
                         i--;
@@ -45,28 +40,23 @@ namespace CalculatingAverages
                         Console.WriteLine("Please enter a valid number between 0-100.");
                         i--;
                         sum = sum - userInput;
-
                     }
                     if (userInput < 0.0)
                     {
                         Console.WriteLine("Please enter a valid number between 0-100.");
                         i--;
                         userInput = 0;
-
                     }
                     else
                     {
                         sum = double.Parse(strsum) + sum;
-
                     }
-
                 }
                 double averageOfSum = sum / countOfInputsMax;
             }
-            catch
+            catch (Exception exc)
             {
-                Console.WriteLine("Your entry was invalid!");
-
+                Console.WriteLine(exc);
             } finally
             {
                 Console.WriteLine("Exiting App!");
@@ -75,13 +65,8 @@ namespace CalculatingAverages
 
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome!");
             CalculateGrades(int.MaxValue);
-
-
-
-
         }
     }
 }
