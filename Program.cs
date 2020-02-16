@@ -52,15 +52,8 @@ namespace CalculatingAverages
          
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome!");
             Program.CalculateGrades(0);
-
-
-            //Console.WriteLine("To Calculate the average for your past 10 grades, please enter your scores from 0-100");
-            //Console.WriteLine("Enter your first number!");
-            //Validation.CalculateAverage(10);
-
         }
     }
 }
