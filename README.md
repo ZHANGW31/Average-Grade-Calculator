@@ -1,4 +1,4 @@
-# ideal-chainsaw
+# Average-Grade-Calculator
 
 Console Application for Calculating Average Scores based on user input
 
